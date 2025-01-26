@@ -35,10 +35,9 @@ Ensure you have the following installed on your system:
 
    Create a `.env` file in the root of the project and configure the required variables:
    ```env
-   REACT_APP_API_URL=http://localhost:5000/api
-   REACT_APP_ENV=development
+   REACT_APP_API_URL=http://localhost:5173/
    ```
-   Replace `http://localhost:5000/api` with the actual API URL if different.
+   Replace `http://localhost:5173/` with the actual API URL if different.
 
 4. **Start the Application**
 
