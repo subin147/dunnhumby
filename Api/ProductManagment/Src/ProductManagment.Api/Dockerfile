@@ -3,16 +3,15 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 5000
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ProductManagment.Api.csproj", "/ProductManagment.Api/"]
-RUN dotnet restore "ProductManagment.Api/ProductManagment.Api.csproj"
+COPY ["Src/ProductManagment.Api/ProductManagment.Api.csproj", "Src/ProductManagment.Api/"]
+RUN dotnet restore "./Src/ProductManagment.Api/ProductManagment.Api.csproj"
 COPY . .
-WORKDIR "/src/ProductManagment.Api"
+WORKDIR "/src/Src/ProductManagment.Api"
 RUN dotnet build "./ProductManagment.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
