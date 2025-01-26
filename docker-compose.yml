@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./Api/ProductManagment/Src/ProductManagment.Api
+    ports:
+      - "5000:5000"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./WebApp/product-management-dashboard
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
