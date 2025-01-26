@@ -9,7 +9,7 @@ This README provides step-by-step instructions to set up, run, and use the .NET 
 Before setting up the project, ensure you have the following installed:
 
 1. [.NET SDK](https://dotnet.microsoft.com/download) (Version: 8.0 or higher)
-2. [Visual Studio](https://visualstudio.microsoft.com/) or any IDE supporting .NET development (e.g., Rider, Visual Studio Code).
+2. [Visual Studio](https://visualstudio.microsoft.com/) or any IDE supporting .NET development.
 
 ---
 
@@ -20,8 +20,8 @@ Before setting up the project, ensure you have the following installed:
 Clone the project repository from GitHub:
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/subin147/dunnhumby.git
+cd dunnhumby
 ```
 
 ### 2. Configure the Environment Variables
@@ -32,23 +32,44 @@ Create `appsettings.json` file in the root directory if it does not exist. Add y
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=your_server_name;Database=your_database_name;User Id=your_user_id;Password=your_password;"
+    "ProductDatabase": "Data Source=productmanagement.db"
   },
-  "Logging": {
-    "LogLevel": {
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.Console",
+      "Serilog.Sinks.File"
+    ],
+    "MinimumLevel": {
       "Default": "Information",
-      "Microsoft": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  },
-  "AllowedHosts": "*"
+      "Override": {
+        "Microsoft": "Information",
+        "System": "Debug"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:\\ProductManagementLogs\\productmanagement_logs.log",
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] [{SourceContext}] [{EventId}] {Message}{NewLine}{Exception}",
+          "rollOnFileSizeLimit": true,
+          "fileSizeLimitBytes": 4194304,
+          "retainedFileCountLimit": 5,
+          "rollingInterval": "Day"
+        }
+      },
+      { "Name": "Console" }
+    ],
+    "Enrich": [ "FromLogContext", "WithMachineName", "WithThreadId" ]
+  }
 }
+
 ```
 
 
 ### 3. Restore Dependencies
 
-Navigate to the project directory and run:
+Navigate to the API project directory and run:
 
 ```bash
 dotnet restore
@@ -63,7 +84,7 @@ Start the application:
 dotnet run
 ```
 
-The API will typically be hosted at `https://localhost:5001` or `http://localhost:5000`.
+The API will be hosted at either `https://localhost:7027` or `http://localhost:5173`.
 
 ---
 
@@ -126,19 +147,15 @@ Below are the available endpoints. Use tools like Postman or swagger UI to inter
 
 ## Testing
 
-### 1. Run Unit Tests
+### Run Unit Tests
 
-To execute unit tests, use the following command:
+To execute unit tests,proceed to the test project directory and use the following command:
 
 ```bash
 dotnet test
 ```
 
-### 2. Mock Data
 
-If mock data is required for testing, ensure it is seeded in your `DbContext` or mock services.
-
----
 
 ## Deployment
 
@@ -148,7 +165,7 @@ For deployment, publish the application using the following command:
 dotnet publish -c Release -o ./publish
 ```
 
-Upload the contents of the `publish` folder to your hosting environment (e.g., Azure, AWS, IIS).
+Upload the contents of the `publish` folder to your hosting environment.
 
 ---
 

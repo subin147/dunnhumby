@@ -8,6 +8,7 @@
     "@mui/material": "^6.4.1",
     "@mui/system": "^6.4.1",
     "@mui/x-charts": "^7.24.1",
+    "@testing-library/jest-dom": "^6.6.3",
     "cra-template-typescript": "1.2.0",
     "dot-env": "^0.0.1",
     "react": "^19.0.0",

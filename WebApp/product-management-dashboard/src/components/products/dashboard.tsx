@@ -17,21 +17,22 @@ const Dashboard = () => {
         }, []);
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <Card sx={{m:2}} >
-            <ProductTable products={products}/>
-            </Card>
-            <Grid  container spacing={2} sx={{m:2}}>
-                <Grid size={6}>
+            <Grid  container spacing={2} sx={{m:2,overflow:'auto'}}>
+                <Grid size={{xs:12,sm:6}} >
                     <Card>
                     <ProductAddedTimeChart products={products}/>
                     </Card>
                 </Grid>
-                <Grid size={6}>
+                <Grid size={{xs:12,sm:6}}>
                 <Card>
                     <StockByCategoryChart products={products}/>
                     </Card>
                 </Grid>
             </Grid>
+            <Card sx={{m:2}} >
+            <ProductTable products={products}/>
+            </Card>
+            
         </Suspense>
 
     )

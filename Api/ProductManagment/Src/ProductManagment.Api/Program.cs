@@ -37,10 +37,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowWeb", policy =>
     {
-        policy.WithOrigins("http://localhost:3002") // Allow any origin
-              .AllowAnyMethod()  // Allow any HTTP method (GET, POST, etc.)
+        policy.WithOrigins("http://localhost:3000") 
+              .AllowAnyMethod()  
               .AllowAnyHeader()
-              .AllowCredentials();  // Allow any headers
+              .AllowCredentials();  
     });
 });
 

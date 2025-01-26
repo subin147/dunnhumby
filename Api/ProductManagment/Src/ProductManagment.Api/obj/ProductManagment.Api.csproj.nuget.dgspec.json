@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj": {}
+    "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj": {}
   },
   "projects": {
-    "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj": {
+    "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
+        "projectUniqueName": "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
         "projectName": "ProductManagment.Api",
-        "projectPath": "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
-        "packagesPath": "C:\\Users\\216548\\.nuget\\packages\\",
-        "outputPath": "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\obj\\",
+        "projectPath": "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
+        "packagesPath": "C:\\Users\\anjup\\.nuget\\packages\\",
+        "outputPath": "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\216548\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anjup\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +78,7 @@
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
-              "version": "[1.20.1, )"
+              "version": "[1.21.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,7 +2,6 @@
 class ProductService{
 
     getProducts(){
-      debugger;
         if (process.env.REACT_APP_PRODUCTS_API) {
             return fetch(process.env.REACT_APP_PRODUCTS_API + 'products' ,
               {

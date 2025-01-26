@@ -876,7 +876,7 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.20.1": {
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {
         "type": "package",
         "build": {
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
@@ -3475,10 +3475,10 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.20.1": {
-      "sha512": "H4bIRdEOuyWBotgdPA5oCjJmUekWrtU5lOKnMAVaSNduZXHnqFZECsYbkm4vIOE4aeIO8TEYqfsZaJus1KknLQ==",
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {
+      "sha512": "8NudeHOE56YsY59HYY89akRMup8Ho+7Y3cADTGjajjWroXVU9RQai2nA6PfteB8AuzmRHZ5NZQB2BnWhQEul5g==",
       "type": "package",
-      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.20.1",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.21.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -3507,7 +3507,7 @@
         "build/ToolsTarget.props",
         "build/ToolsTarget.targets",
         "icon.png",
-        "microsoft.visualstudio.azure.containers.tools.targets.1.20.1.nupkg.sha512",
+        "microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
         "microsoft.visualstudio.azure.containers.tools.targets.nuspec",
         "tools/Microsoft.VisualStudio.Containers.Tools.Common.dll",
         "tools/Microsoft.VisualStudio.Containers.Tools.Shared.dll",
@@ -4457,25 +4457,25 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.1",
       "Microsoft.Extensions.DependencyInjection >= 9.0.1",
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.20.1",
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
       "Serilog.AspNetCore >= 9.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\216548\\.nuget\\packages\\": {}
+    "C:\\Users\\anjup\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
+      "projectUniqueName": "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
       "projectName": "ProductManagment.Api",
-      "projectPath": "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
-      "packagesPath": "C:\\Users\\216548\\.nuget\\packages\\",
-      "outputPath": "C:\\Subin\\Task\\Source\\Api\\ProductManagment\\Src\\ProductManagment.Api\\obj\\",
+      "projectPath": "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\ProductManagment.Api.csproj",
+      "packagesPath": "C:\\Users\\anjup\\.nuget\\packages\\",
+      "outputPath": "D:\\Subin\\Interview\\Dunnhumby\\dunnhumby\\Api\\ProductManagment\\Src\\ProductManagment.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\216548\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\anjup\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4539,7 +4539,7 @@
           },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
-            "version": "[1.20.1, )"
+            "version": "[1.21.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",
@@ -4569,7 +4569,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.308/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

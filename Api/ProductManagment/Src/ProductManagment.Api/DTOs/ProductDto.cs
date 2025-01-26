@@ -17,6 +17,9 @@ namespace ProductManagment.Api.DTOs
         public DateTime DateAdded { get; set; }
     }
 
+    /// <summary>
+    /// Validator for input data
+    /// </summary>
     public class ProductValidator : AbstractValidator<ProductDto>
     {
         public ProductValidator()

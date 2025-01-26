@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BarChart } from '@mui/x-charts/BarChart';
-import productService from "../../data/api/product.service";
 import { Product } from "../../data/models/productmodels";
 const ProductsAddedChart = ({ products }: { products: Product[] }) => {
     const [chartData, setChartData] = useState<{ period: string; count: number }[]>([]);
 
     useEffect(() => {
-
+        debugger;
         const periods = {
             week: products.filter((product: Product) => getWeekNumber(new Date(product.DateAdded)) == getWeekNumber(new Date)).length,
             month: products.filter((product: Product) => new Date(product.DateAdded).getMonth() == new Date().getMonth()).length,

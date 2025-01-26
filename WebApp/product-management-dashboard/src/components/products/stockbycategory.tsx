@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BarChart } from '@mui/x-charts/BarChart';
-import productService from "../../data/api/product.service";
 import { Product } from "../../data/models/productmodels";
 const StockByCategoryChart = ({ products }: { products: Product[] }) => {
     const [chartData, setChartData] = useState<{ category: string; stockQuantity: number }[]>([]);

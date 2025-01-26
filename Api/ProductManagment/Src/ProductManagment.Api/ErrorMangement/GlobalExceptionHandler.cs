@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProductManagment.Api.Middlewares
 {
+    /// <summary>
+    /// Gloabl exception handler to handle unhandled exceptions
+    /// </summary>
+    /// <param name="logger"></param>
     internal sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger)
     : IExceptionHandler
     {

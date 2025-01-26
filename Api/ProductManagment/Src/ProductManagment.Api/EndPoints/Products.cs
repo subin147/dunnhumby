@@ -7,12 +7,20 @@ using System;
 
 namespace ProductManagment.Api.EndPoints
 {
+    /// <summary>
+    /// Product end points for the API
+    /// </summary>
     public static class Products
     {
+        /// <summary>
+        /// Method to register end points
+        /// </summary>
+        /// <param name="app"></param>
         public static void MapProductEndpoints(this WebApplication app)
         {
             app.MapPost("/products/register", async (IProductRepository repository, ProductDto product,IValidator<ProductDto> validator) =>
             {   
+                //validate provided input for invalid data
                 var validationResult = await validator.ValidateAsync(product);
                 if (!validationResult.IsValid)
                 {
