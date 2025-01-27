@@ -1,24 +1,16 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
-WORKDIR /app
-EXPOSE 5000
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Src/ProductManagment.Api/ProductManagment.Api.csproj", "Src/ProductManagment.Api/"]
-RUN dotnet restore "./Src/ProductManagment.Api/ProductManagment.Api.csproj"
+
+COPY ProductManagment.Api.csproj .
+RUN dotnet restore
 COPY . .
-WORKDIR "/src/Src/ProductManagment.Api"
-RUN dotnet build "./ProductManagment.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./ProductManagment.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish -c Release -o /app
 
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app .
+EXPOSE 80
+
 ENTRYPOINT ["dotnet", "ProductManagment.Api.dll"]
